@@ -1,0 +1,17 @@
+body {
+	background-color: lightgray;
+}
+h1 {
+	color: green;
+	font-family: monospace;
+	font-size: 35px;
+}	
+p {
+	font-family: comic sans ms;
+	font-size: 20px;
+}	
+ul {
+	font-family: arial;
+	font-size: 18px;
+	color: blue;
+}	
