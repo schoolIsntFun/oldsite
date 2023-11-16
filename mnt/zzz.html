@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<script src='/everypage.js'></script>
+<html>
+<head>
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+    width: 100vw;
+    height: auto;
+    max-width: none;
+    max-height: 100vh;
+    object-fit: contain;
+}
+</style>
+</head>
+<body>
+<audio id="rick" src="zzz.mp3" preload="auto"></audio>
+<img id="getRick" width="auto" height="auto" src="zzz.gif" onload='playSound()'>
+<script>
+var seconds = 5;
+setTimeout('Redirect()', (seconds*1000));
+function Redirect() {  
+    alert('Get Rick-Rolled');
+    window.location=".."; 
+} 
+
+function playSound() {
+document.getElementById('rick').play();
+}
+</script>
+</body>
+</html>
