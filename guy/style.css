@@ -1,0 +1,21 @@
+:root{--green: #00ac00;
+      --orange: #e69138;
+      --gray:#e9edfd;;
+      --curve:10px;
+      --lightpink:#ffebeb;
+      --darkpink:#ffd4d4;}
+
+sup {color:var(--green);font-size:11px;}
+u.time {font-size:17px; color:gray; padding-bottom: 5px;}
+table, td {border:0px solid black;}
+table {border-radius: var(--curve) var(--curve) 0px 0px;background: black;}
+td {background: white;}
+p {color: gray;}
+button{background-color:gray;border-radius:10px;width:120px;}
+h2 {color:lightgray;}
+th {background: lightgray;border: 0px solid black;}
+body {background-color:#2b2b2b;font-family:"Arvo";}
+.gray{background:var(--gray)}
+.grey{background:white}
+.DP{background:var(--darkpink)}
+.LP{background:var(--lightpink)}
