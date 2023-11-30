@@ -34,4 +34,6 @@ b {
 	postion: absolute;
 	top: 75%;
 	left: 75%;
+	border-width: 3px;
+	border-color: black;
 }	
