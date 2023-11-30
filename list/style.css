@@ -32,8 +32,8 @@ b {
 }	
 .form {
 	postion: absolute;
-	top: 75%;
-	left: 75%;
+	top: 25%;
+	left: 25%;
 	border-width: 3px;
 	border-color: black;
 	border-style: soild;
