@@ -36,4 +36,6 @@ b {
 	left: 75%;
 	border-width: 3px;
 	border-color: black;
+	border-style: soild;
+	border-radius: 5px;
 }	
