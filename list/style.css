@@ -26,3 +26,7 @@ color: green;
 a:visited {
 color: green;
 }
+b {
+	color: red;
+	font-size: 20px;
+}	
