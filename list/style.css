@@ -9,6 +9,7 @@ h1 {
 p {
 	font-family: comic sans ms;
 	font-size: 20px;
+	float: left;
 }	
 ul {
 	font-family: arial;
@@ -19,6 +20,7 @@ ul {
 	color: red;
 	font-weight: bold;
 	font-size: 16px;
+	float: left;
 }
 a {
 color: green;
