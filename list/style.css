@@ -30,3 +30,8 @@ b {
 	color: red;
 	font-size: 20px;
 }	
+.form {
+	postion: absolute;
+	top: 500px;
+	left: 400px;
+}	
