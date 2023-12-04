@@ -98,8 +98,8 @@ function updateGameArea() {
         } 
     }
     myGameArea.clear();
-    myGameArea.frameNo += 50;
-    if (myGameArea.frameNo == 100 || everyinterval(150)) {
+    myGameArea.frameNo += 1;
+    if (myGameArea.frameNo == 1 || everyinterval(150)) {
         x = myGameArea.canvas.width;
         minHeight = 20;
         maxHeight = 200;
@@ -130,7 +130,7 @@ function accelerate(n) {
 }
 </script>
 <br>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.1)">ACCELERATE</button>
+<button onmousedown="accelerate(-0.6)" onmouseup="accelerate(0.1)">ACCELERATE</button>
 <p>Use the ACCELERATE button to stay in the air</p>
 <p>How long can you stay alive?</p>
 </body>
