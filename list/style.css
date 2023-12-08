@@ -43,3 +43,8 @@ b {
 	display: none;
 }
 
+#iframeDiv {
+    /* Styles for the #iframeDiv div when it's visible */
+    display: none; /* Hidden by default */
+    /* Add other styles as needed */
+}
