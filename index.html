@@ -14,26 +14,21 @@ password=prompt('The password is a lowercase fruit. btw there is a space at the 
 if (password===pass1)
 {
  alert('Correct, good job!');
- let  correct = 1;
- sessionStorage.setItem('corr', correct);
+ sessionStorage.setItem('corr', 1);
 }
 else
    {
     alert('password incorrect!');
-    let correct = 0; 
+    sessionStorage.setItem('corr', 0);
    }
  let correct = sessionStorage.getItem('corr') 
-if (correct === '1')
+if (correct === 1)
  {
    listFirst = document.getElementById('list');
   if (listFirst.style.display === 'none') {
     listFirst.style.display = 'block';
   } 
   } 
-else {
- listFirst.style.display = 'none';
-}
- sessionStorage.clear();
 </script>
  <script type='text/javascript'> 
 document.addEventListener('contextmenu', event=> event.preventDefault()); 
