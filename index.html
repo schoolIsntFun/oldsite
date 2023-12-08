@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>alwdawdpha</title>
+ <title>beat</title>
 <script type='text/JavaScript'>
 
  document.addEventListener('DOMContentLoaded', function() {
@@ -13,7 +13,7 @@ var listFirst;
 var password = prompt('The code is a lowercase fruit. if you get it wrong refresh','');
 
  
-if (password==pass1)
+if (password===pass1)
 {
  alert('Correct, good job!');
  sessionStorage.removeItem('corr');
@@ -29,7 +29,7 @@ correct = sessionStorage.getItem('corr');
 
  let listFirst = document.getElementById('abc');
  
- if(correct == 1)
+ if(correct === '1')
  {
   listFirst.style.display = 'block';
   } 
