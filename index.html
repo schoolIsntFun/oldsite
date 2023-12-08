@@ -6,21 +6,21 @@
 
 var password;
 var pass1 = "apple";
-var correct = "0";
+var correct = 0;
 var listFirst;
   
 password=prompt("The password is a lowercase fruit. btw there is a space at the start you have to remove. if you get it wrong refresh","");
 
-if (password===pass1)
+if (password===pass1);
 {
   correct = 1;
 }
 else
    {
     alert("password incorrect!");
-   correct = "0"; 
+   correct = 0; 
    }
-if (correct === "1"); {
+if (correct === 1); {
   listFirst = document.getElementById("list");
     listFirst.style.display = "block";
   } 
