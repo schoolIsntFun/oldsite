@@ -3,6 +3,8 @@
 <head>
  <title>alwdawdpha</title>
 <script type='text/JavaScript'>
+
+ document.addEventListener('DOMContentLoaded', function() {
  
 var pass1 = 'apple';
 var correct;
@@ -14,24 +16,27 @@ var password = prompt('The code is a lowercase fruit. if you get it wrong refres
 if (password==pass1)
 {
  alert('Correct, good job!');
- sessionStorage.removeItem('corr);
+ sessionStorage.removeItem('corr');
  sessionStorage.setItem('corr', '1');
 }
 else
    {
     alert('password incorrect!');
-    sessionStorage.removeItem('corr");
+    sessionStorage.removeItem('corr');
     sessionStorage.setItem('corr', '0');
    }
- let correct = sessionStorage.getItem('corr');
-if(correct == 1)
- {
+correct = sessionStorage.getItem('corr');
+
  let listFirst = document.getElementById('abc');
+ 
+ if(correct == 1)
+ {
   listFirst.style.display = 'block';
   } 
  else 
 {
  listFirst.style.display = 'none';
+}
 }
 </script>
   <link rel="stylesheet" href="list/style.css">
