@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>beasdat</title>
+ <title>tree</title>
 <script type='text/JavaScript'>
 
  document.addEventListener('DOMContentLoaded', function() {
  
 var pass1 = 'apple';
 var correct;
-var listFirst;  
  
 var password = prompt('The code is a lowercase fruit. if you get it wrong refresh','');
 
@@ -28,7 +27,7 @@ if (password === null) {
 }
 correct = sessionStorage.getItem('corr');
 
- listFirst = document.getElementById('abc');
+ var listFirst = document.getElementById('abc');
  
  if(correct === '1')
  {
