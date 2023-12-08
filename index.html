@@ -14,12 +14,12 @@ password=prompt('The password is a lowercase fruit. btw there is a space at the 
 if (password===pass1)
 {
  alert('Correct, good job!');
- sessionStorage.setItem('corr', 1);
+ sessionStorage.setItem('corr', '1');
 }
 else
    {
     alert('password incorrect!');
-    sessionStorage.setItem('corr', 0);
+    sessionStorage.setItem('corr', '0');
    }
  let correct = sessionStorage.getItem('corr') 
 if(correct == 1)
