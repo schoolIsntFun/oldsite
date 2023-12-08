@@ -1,11 +1,13 @@
 <html>
 <head>
 <script language="JavaScript">
+  <title>Haso Test<title>
 <!--hide
 
 var password;
 var pass1 = "apple";
 var correct = "0";
+var listFirst;
   
 password=prompt("The password is a lowercase fruit. btw there is a space at the start you have to remove. if you get it wrong refresh","");
 
@@ -19,14 +21,9 @@ else
    correct = "0"; 
    }
 if (correct === "1"); {
-   var listFirst = document.getElementById("list");
-  if (listFirst.style.display === "hidden") {
+  listFirst = document.getElementById("list");
     listFirst.style.display = "block";
   } 
-  else {
-    listFirst.style.display = "hidden"
-    }
-}
 //-->
 </script>
  <script> 
