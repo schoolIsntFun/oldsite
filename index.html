@@ -15,11 +15,13 @@ if (password===pass1)
 {
  alert('Correct, good job!');
  let  correct = 1;
+ return false;
 }
 else
    {
     alert('password incorrect!');
     let correct = 0; 
+    return true;
    }
 if (correct === 1)
  {
