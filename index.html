@@ -1,83 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>tree</title>
-<script type='text/JavaScript'>
+    <title>tree</title>
+    <script type='text/JavaScript'>
+        document.addEventListener('DOMContentLoaded', function() {
+            var pass1 = 'apple';
+            var correct;
 
- document.addEventListener('DOMContentLoaded', function() {
- 
-var pass1 = 'apple';
-var correct;
- 
-var password = prompt('The code is a lowercase fruit. if you get it wrong refresh','');
+            var password = prompt('The code is a lowercase fruit. if you get it wrong refresh', '');
 
- 
-if (password === null) {
-   alert('Canceled');
-   sessionStorage.removeItem('corr');
-   sessionStorage.setItem('corr', '0');
-} else if (password === pass1) {
-    alert('Correct, good job!');
-    sessionStorage.removeItem('corr');
-    sessionStorage.setItem('corr', '1');
-} else {
-    alert('Password incorrect!');
-    sessionStorage.removeItem('corr');
-    sessionStorage.setItem('corr', '0');
-}
-correct = sessionStorage.getItem('corr');
+            if (password === null) {
+                alert('Canceled');
+                sessionStorage.removeItem('corr');
+                sessionStorage.setItem('corr', '0');
+            } else if (password === pass1) {
+                alert('Correct, good job!');
+                sessionStorage.removeItem('corr');
+                sessionStorage.setItem('corr', '1');
+            } else {
+                alert('Password incorrect!');
+                sessionStorage.removeItem('corr');
+                sessionStorage.setItem('corr', '0');
+            }
 
- var listFirst = document.getElementById('abc');
- 
- if(correct === '1')
- {
-  listFirst.style.display = 'block';
-  } 
- else 
-{
- listFirst.style.display = 'none';
-}
-})
-</script>
-  <link rel="stylesheet" href="list/style.css">
+            correct = sessionStorage.getItem('corr');
+
+            var abcDiv = document.getElementById('abc');
+            var iframeDivs = document.querySelectorAll('.iframeDiv');
+
+            if (correct === '1') {
+                abcDiv.style.display = 'block';
+            } else {
+                abcDiv.style.display = 'none';
+            }
+
+            var links = document.querySelectorAll('.linkToShowIframe');
+
+            links.forEach(function(link, index) {
+                link.addEventListener('click', function() {
+                    iframeDivs.forEach(function(iframeDiv, i) {
+                        iframeDiv.style.display = 'none';
+
+                        if (index === i) {
+                            var iframe = iframeDiv.querySelector('iframe');
+                            var src = link.getAttribute('data-src');
+                            iframe.src = src;
+                        }
+                    });
+
+                    iframeDivs[index].style.display = 'block';
+                });
+            });
+        })
+    </script>
+    <link rel="stylesheet" href="list/style.css">
 </head>
-  <body>
-  <div id="abc" style="display: none;">
-   <a href="index.html">Log out</a>
-    <br>
-    <h1><div class="red">DISCLAMER: I (Hasoaxe/contributors) AM NOT RESPONSIBLE FOR ANY HARM OR PUNISHMENT. USE AT YOUR OWN RISK.</div></h1>
-<br>
-    <h1>Hasoaxe.github.io   pages</h1>
-<br> 
-<a href="/proxies/index.html"><h1>Proxies</h1></a>    
-<button type="button" onclick="alert(correct)">testing javascript shit</button>
+<body>
+    <div id="abc" style="display: none;">
+        <a href="index.html">Log out</a>
+        <br>
+        <h1><div class="red">DISCLAIMER: I (Hasoaxe/contributors) AM NOT RESPONSIBLE FOR ANY HARM OR PUNISHMENT. USE AT YOUR OWN RISK.</div></h1>
+        <br>
+        <h1>Hasoaxe.github.io   pages</h1>
+        <br> 
+        <a href="/proxies/index.html"><h1>Proxies</h1></a>    
+        <button type="button" onclick="alert(correct)">testing javascript shit</button>
 
-    <h1>btw I fixed links as of 28/11/2023</h1>
-<br>
-<p>I (Hasoaxe) am hosting all of these under one account (Hasoaxe) and therfore if the Hasoaxe.github.io is blocked by your internet provider or system or network; you cannot use these.</p>
-<br>
-<ul>
-<li><a href="/sha/index.html">This is Shadow Games.</a> This is the url (not link) for this page in my sites FILE now hehe. Hasoaxe.github.io/sha/index.html</li>
-<li><a href="/3kh0/index.html">This is 3kh0.</a>  This is the url (not link) for this page in my sites FILE now hehe. Hasoaxe.github.io/3kh0/index.html</li>
-<li><a href="/mnt/index.html">This is Mountain Game Games</a>This is the url (not link) for this page in my sites FILE now hehe. Hasoaxe.github.io/mnt/index.html</li>
-<li><a href="/retro/index.html">This is "myRETROGAMES"</a>  This is the url (not link) for this page in my sites File now hehe. Hasoaxe.github.io/retro/index.html</li>
-<li><a href="/guy/index.html">This is theguy888</a> This is the url (not link) for this page in my sites FILE now hehe. Hasoaxe.github.io/guy/index.html</li>
-<li><a href="/gba/index.html">This is GBA2.0</a> This is url (not link) for this page in my sites FILE now hehe. Hasoaxe.github.io/gba/index.html</li>
-<li><a href="/msgweb/index.html">This is MSGWEB</a> This is url (not link) for this page in my sites FILE now hehe. Hasoaxe.github.io/msgweb/index.html</li>
-<li><a href="/math/index.html">This is Mathgames66</a> This is url (not link) for this page in my sites FILE now hehe. Hasoaxe.github.io/math/index.html</li>
-<!--<li><a href='/smd/index.html'>This is smdgames</a> This is url (not link) for this page in my sites FILE now hehe. Hasoaxe.github.io/smd/index.html</li>-->
-<!--<li><a href="/retro/index.html'>yooo im testing this cause binares are hard to put in cause of how FUCKING big the code is i have a tiny clue what it is for but i only saw it being used once so idk</a></li>-->
-</ul>
-    <a href="list/credits.html"> CREDITS</a> 
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc9_lyyUtpM7vLTDgQZCRHbQ8HQBjSvyjxqmHL9KcjPmWT9Og/viewform?embedded=true" width="640" height="452" frameborder="0" marginheight="0" marginwidth="0" class="form" >Loading…</iframe>
-    <script type="text/javascript" src="https://www.free-counters.org/count/dcjs"></script><br>
- <a href="https://acadooghostwriter.com/">ACADOOghostwriter.com</a> <script type="text/javascript" src="https://whomania.com/ctr?id=13c437aa26fa2ba02357f200f154b2dfb70b3d55"></script>
-<a href="https://github.com/Hasoaxe/Hasoaxe.github.io/issues">Request a Game Site/Report a bug</a>
-<br>
-<a href="list/about.html">About</a>    
-<br>
-<a href="list/reply.html">MY REPLYS TO ISSUES/SUGGESTIONS</a> 
-  </div>
-    
-  </body>
+        <h1>btw I fixed links as of 28/11/2023</h1>
+        <br>
+        <p>I (Hasoaxe) am hosting all of these under one account (Hasoaxe) and therefore if the Hasoaxe.github.io is blocked by your internet provider or system or network; you cannot use these.</p>
+        <br>
+        <ul>
+            <li><a class="linkToShowIframe" data-src="/sha/index.html" href="#">This is Shadow Games.</a></li>
+            <li><a class="linkToShowIframe" data-src="/3kh0/index.html" href="#">This is 3kh0.</a></li>
+            <li><a class="linkToShowIframe" data-src="/mnt/index.html" href="#">This is Mountain Game Games</a></li>
+            <li><a class="linkToShowIframe" data-src="/retro/index.html" href="#">This is "myRETROGAMES"</a></li>
+            <li><a class="linkToShowIframe" data-src="/guy/index.html" href="#">This is theguy888</a></li>
+            <li><a class="linkToShowIframe" data-src="/gba/index.html" href="#">This is GBA2.0</a></li>
+            <li><a class="linkToShowIframe" data-src="/msgweb/index.html" href="#">This is MSGWEB</a></li>
+            <li><a class="linkToShowIframe" data-src="/math/index.html" href="#">This is Mathgames66</a></li>
+        </ul>
+        <a href="list/credits.html"> CREDITS</a> 
+        <div class="iframeDiv">
+            <iframe src="/sha/index.html" frameborder="0" width="100%" height="452"></iframe>
+        </div>
+        <div class="iframeDiv">
+            <iframe src="/3kh0/index.html" frameborder="0" width="100%" height="452"></iframe>
+        </div>
+        <!-- Add more iframeDiv elements as needed -->
+        <script type="text/javascript" src="https://www.free-counters.org/count/dcjs"></script><br>
+        <a href="https://acadooghostwriter.com/">ACADOOghostwriter.com</a> <script type="text/javascript" src="https://whomania.com/ctr?id=13c437aa26fa2ba02357f200f154b2dfb70b3d55"></script>
+        <a href="https://github.com/Hasoaxe/Hasoaxe.github.io/issues">Request a Game Site/Report a bug</a>
+        <br>
+        <a href="list/about.html">About</a>    
+        <br>
+        <a href="list/reply.html">MY REPLYS TO ISSUES/SUGGESTIONS</a> 
+    </div>
+</body>
 </html>
