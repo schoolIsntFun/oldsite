@@ -15,14 +15,15 @@ if (password===pass1)
 {
  alert('Correct, good job!');
  let  correct = 1;
- sessionStorage.setItem("corr", correct);
+ sessionStorage.setItem('corr', correct);
 }
 else
    {
     alert('password incorrect!');
     let correct = 0; 
    }
-if (sessionStorage.getItem("corr") === 1)
+ let correct = sessionStorage.getItem('corr') 
+if (correct === '1')
  {
    listFirst = document.getElementById('list');
   if (listFirst.style.display === 'none') {
