@@ -22,9 +22,13 @@ else
 if (correct === 1);
  {
    listFirst = document.getElementById('list');
+  if (listFirst.style.display === 'none'); {
     listFirst.style.display = 'block';
   } 
-
+  } 
+else {
+ listFirst.style.display = 'none';
+}
 </script>
  <script type='text/javascript'> 
 document.addEventListener('contextmenu', event=> event.preventDefault()); 
