@@ -39,3 +39,12 @@ b {
 	border-style: soild;
 	border-radius: 5px;
 }	
+#abc {
+	display: none;
+}
+
+.iframeDiv {
+    /* Styles for the #iframeDiv div when it's visible */
+    display: none; /* Hidden by default */
+    /* Add other styles as needed */
+}
