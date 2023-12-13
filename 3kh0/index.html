@@ -24,11 +24,49 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-  </head>
+     <script type='text/JavaScript'>
+        document.addEventListener('DOMContentLoaded', function() {
+            var pass1 = 'apple';
+            var correct;
+
+            var password = prompt('The code is a lowercase fruit. if you get it wrong refresh', '');
+
+            if (password === null) {
+                alert('Canceled');
+                sessionStorage.removeItem('corr');
+                sessionStorage.setItem('corr', '0');
+            } else if (password === pass1) {
+                alert('Correct, good job!');
+                sessionStorage.removeItem('corr');
+                sessionStorage.setItem('corr', '1');
+            } else {
+                alert('Password incorrect!');
+                sessionStorage.removeItem('corr');
+                sessionStorage.setItem('corr', '0');
+            }
+
+            correct = sessionStorage.getItem('corr');
+
+            var abcDiv = document.getElementById('abc');
+         
+          if (correct === '1') {
+                abcDiv.style.display = 'block';
+            } else {
+                abcDiv.style.display = 'none';
+            }
+        })
+          </script>
+    <style>
+      #abc {
+	display: none;
+}
+    </style>
+    </head>
   <!--Welcome to the source code. If you're looking at this through the developer console and know what you're doing, come help us!
   Open a PR at https://github.com/3kh0/3kh0.github.io/pulls-->
   <body>
-    <p class="text-center-highlight">This project was sponsored by:</p>
+    <div id="abc">
+      <p class="text-center-highlight">This project was sponsored by:</p>
     <div class="text-center">
       <iframe src="https://hub.alienhub.xyz/show?utm_medium=3kh0" width="450" height="150"></iframe>
     </div>
@@ -1574,6 +1612,7 @@
     </div>
     <div id="fetchFail">
       Oh no! We tried to check if this deployment of the site is up to date, but we failed!
+    </div>
     </div>
   </body>
 </html>
