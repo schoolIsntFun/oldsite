@@ -22,9 +22,11 @@ ul {
 }
 a {
 color: green;
+text-decoration: underline;
 }
 a:visited {
 color: green;
+text-decoration: underline;
 }
 b {
 	color: red;
